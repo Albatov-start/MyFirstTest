@@ -1,9 +1,10 @@
 using System;
 using System.Threading;
 
-int stamina = 300;
+int stamina = 500;
 int distance = 5;
 int PlayerHealth = 100;
+int MedKits = 1;
 
 Console.WriteLine("[START] Hvatun spawned!");
 Console.WriteLine("[START] Hvatun has 300 stamina!");
@@ -33,7 +34,10 @@ while (PlayerHealth > 0)
         PlayerHealth = 0; 
     }
     Console.WriteLine("[WARNING] You have now " + PlayerHealth + " HP");
-
+    if (PlayerHealth <40 && MedKits > 0){
+     PlayerHealth = PlayerHealth + 50;
+      Console.WriteLine("[UPDATE] You have + 50 HP!");
+      MedKits = 0;}
     Thread.Sleep(600); 
 }
 
