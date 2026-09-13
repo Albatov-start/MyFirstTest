@@ -1,0 +1,14 @@
+C:\Users\t7175\MyFirstTest\bin\Debug\net10.0\MyFirstTest.exe
+C:\Users\t7175\MyFirstTest\bin\Debug\net10.0\MyFirstTest.deps.json
+C:\Users\t7175\MyFirstTest\bin\Debug\net10.0\MyFirstTest.runtimeconfig.json
+C:\Users\t7175\MyFirstTest\bin\Debug\net10.0\MyFirstTest.dll
+C:\Users\t7175\MyFirstTest\bin\Debug\net10.0\MyFirstTest.pdb
+C:\Users\t7175\MyFirstTest\obj\Debug\net10.0\MyFirstTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\t7175\MyFirstTest\obj\Debug\net10.0\MyFirstTest.AssemblyInfoInputs.cache
+C:\Users\t7175\MyFirstTest\obj\Debug\net10.0\MyFirstTest.AssemblyInfo.cs
+C:\Users\t7175\MyFirstTest\obj\Debug\net10.0\MyFirstTest.csproj.CoreCompileInputs.cache
+C:\Users\t7175\MyFirstTest\obj\Debug\net10.0\MyFirstTest.dll
+C:\Users\t7175\MyFirstTest\obj\Debug\net10.0\refint\MyFirstTest.dll
+C:\Users\t7175\MyFirstTest\obj\Debug\net10.0\MyFirstTest.pdb
+C:\Users\t7175\MyFirstTest\obj\Debug\net10.0\MyFirstTest.genruntimeconfig.cache
+C:\Users\t7175\MyFirstTest\obj\Debug\net10.0\ref\MyFirstTest.dll
