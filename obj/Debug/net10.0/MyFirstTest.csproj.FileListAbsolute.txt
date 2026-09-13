@@ -12,3 +12,4 @@ C:\Users\t7175\MyFirstTest\obj\Debug\net10.0\refint\MyFirstTest.dll
 C:\Users\t7175\MyFirstTest\obj\Debug\net10.0\MyFirstTest.pdb
 C:\Users\t7175\MyFirstTest\obj\Debug\net10.0\MyFirstTest.genruntimeconfig.cache
 C:\Users\t7175\MyFirstTest\obj\Debug\net10.0\ref\MyFirstTest.dll
+C:\Users\t7175\MyFirstTest\obj\Debug\net10.0\MyFirstTest.sourcelink.json
