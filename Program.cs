@@ -1,52 +1,49 @@
 using System;
+using System.Security.Cryptography.X509Certificates;
 using System.Threading;
-
-int stamina = 500;
-int distance = 5;
-int PlayerHealth = 100;
-int MedKits = 1;
-
-Console.WriteLine("[START] Hvatun spawned!");
-Console.WriteLine("[START] Hvatun has 300 stamina!");
-Console.WriteLine("[START] Sound System: Loud roar played!");
-Console.WriteLine("-------------------------------------");
-
-while (distance > 1)
+class Program
 {
-    Console.WriteLine("[UPDATE] Checking distance... Current: " + distance + "m");
-    distance = distance - 1;
-    Thread.Sleep(400); 
-}
-
-Console.WriteLine("\n[UPDATE] STATUS: ATTACK! Hvatun reached you!");
-
-while (PlayerHealth > 0)
-{
-    PlayerHealth = PlayerHealth - 35;
-    stamina = stamina - 100;
-
-    Console.WriteLine("--------------------------------");
-    Console.WriteLine("[ATTACK] Hvatun bites you for 35 damage!");
-    Console.WriteLine("[INFO] Hvatun stamina left: " + stamina + " stamina");
-    
-    if (PlayerHealth < 0) 
+    static void Main()
     {
-        PlayerHealth = 0; 
+        Player riley = new Player();
+        Hvatun hvatun = new Hvatun();
+        Random cryptoDice = new Random();
+        Console.WriteLine("[START] Batlle initiated! Riley vs Hvatun!");
+        Console.WriteLine("-------------------------------------------");
+        while (riley.health > 0 && hvatun.health > 0)
+        {
+            bool success = riley.TryDodge();
+          
+             if ( success = false )
+             {
+         hvatun.Bite(riley, cryptoDice);
+             }
+            else
+            {
+                hvatun.stamina = hvatun.stamina - 100;
+                Console.WriteLine("[DODGE] Hvatun missed!");                   
+                                            
+            }
+            if (hvatun.stamina <= 0)
+             {
+                riley.HitWithKnife(hvatun);
+                Console.WriteLine("[UPDATE] Hvatun has " + hvatun.health + " HP!");
+             }
+                riley.UseMedkit();
+            if (riley.health < 0) { riley.health = 0; }
+            Console.WriteLine("[STATUS] Riley HP: " + riley.health);
+            Console.WriteLine("-----------------------------------");
+            Thread.Sleep(900);
+
+            
+              
+               
+           
+
+        }
+     Console.WriteLine("/n--------------------------------------");
+     Console.WriteLine("[GAME OVER] The battle is finished!");
+     Console.WriteLine("----------------------------------------");
     }
-    Console.WriteLine("[WARNING] You have now " + PlayerHealth + " HP");
-    if (PlayerHealth <40 && MedKits > 0){
-     PlayerHealth = PlayerHealth + 50;
-      Console.WriteLine("[UPDATE] You have + 50 HP!");
-      MedKits = 0;}
-    Thread.Sleep(600); 
 }
-
-Console.WriteLine("\n================================");
-Console.WriteLine("[GAME OVER] Hvatun killed you!");
-Console.WriteLine("================================");
-
-
-
-
-
 
