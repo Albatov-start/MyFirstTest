@@ -1,5 +1,4 @@
 using System;
-using System.Security.Cryptography.X509Certificates;
 using System.Threading;
 class Program
 {
@@ -14,36 +13,38 @@ class Program
         {
             bool success = riley.TryDodge();
           
-             if ( success = false )
+             if ( success == false )
              {
          hvatun.Bite(riley, cryptoDice);
              }
             else
             {
-                hvatun.stamina = hvatun.stamina - 100;
+                hvatun.LoseStamina();
                 Console.WriteLine("[DODGE] Hvatun missed!");                   
                                             
             }
-            if (hvatun.stamina <= 0)
+            if (hvatun.IsTired())
              {
                 riley.HitWithKnife(hvatun);
                 Console.WriteLine("[UPDATE] Hvatun has " + hvatun.health + " HP!");
+                hvatun.Rest();
+
+                
              }
                 riley.UseMedkit();
             if (riley.health < 0) { riley.health = 0; }
             Console.WriteLine("[STATUS] Riley HP: " + riley.health);
             Console.WriteLine("-----------------------------------");
             Thread.Sleep(900);
-
-            
-              
-               
-           
-
         }
      Console.WriteLine("/n--------------------------------------");
      Console.WriteLine("[GAME OVER] The battle is finished!");
      Console.WriteLine("----------------------------------------");
+     if ( hvatun.health <= 0)
+        {
+            hvatun.health = 0;
+            Console.WriteLine("[HVATUN] Hvatun died!. You win!");
+        }
     }
 }
 

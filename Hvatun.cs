@@ -2,6 +2,29 @@ using System;
 class Hvatun{
     public int health = 150;
     public int stamina = 300;
+    
+    
+    public void Rest()
+    {
+        stamina = 150;
+        Console.WriteLine("[UPDATE] Hvatun recovery 150 stamina!");
+    }
+    public bool IsTired()
+    {
+        if (stamina <= 0)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    public void LoseStamina()
+    {
+        stamina = stamina - 100;
+        Console.WriteLine("[DODGE] Hvatun  missed and lost 100 stamina!");
+    }
     public void Bite(Player target, Random dice){
         if (stamina <= 0)
         {
